@@ -10,6 +10,6 @@ io.on('connection', function(socket){
   console.log('a user connected');
 });
 
-http.listen(8080, function(){
+http.listen(process.env.PORT, function(){
   console.log('listening on *:8080');
 });

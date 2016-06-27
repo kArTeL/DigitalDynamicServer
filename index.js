@@ -8,6 +8,7 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket){
   console.log('a user connected');
+  socket.broadcast.emit('spin-on');
 });
 
 http.listen(process.env.PORT, function(){
